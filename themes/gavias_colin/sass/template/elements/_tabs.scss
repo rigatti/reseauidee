@@ -1,0 +1,51 @@
+.gsc-tabs{
+  .tabs_wrapper{
+    &.tabs_horizontal{
+      .nav-tabs{
+        margin: 5px 0;
+        padding: 10px;
+        @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.1));
+        background: $white;
+      }
+      .tab-content{
+        margin-top: 20px;
+        .tab-pane{
+          background: $white;
+          @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.1));
+          padding: 30px;
+        } 
+      }
+    }
+    &.tabs_vertical{
+      .nav-tabs{
+        width: 25%;
+        float: left;
+        > li{
+          @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.1));
+          background: $white;
+          display: block;
+          margin-bottom: 20px;
+          width: 100%;
+          margin-right: 0;
+          padding-right: 0;
+          a{
+            width: 100%;
+          }
+          &:last-child{
+            margin-bottom: 0;
+          }
+        }
+      }
+      .tab-content{
+        width: 75%;
+        float: left;
+        padding-left: 15px;
+        .tab-pane{
+          background: $white;
+          @include box-shadow(0 1px 6px rgba(0, 0, 0, 0.1));
+          padding: 30px;
+        }  
+      }
+    }
+  }  
+}

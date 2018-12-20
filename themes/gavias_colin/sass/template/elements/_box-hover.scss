@@ -1,0 +1,36 @@
+.gsc-box-hover{
+  &.style-1{
+    padding: 20px;
+    border: 1px solid $border-color;
+    position: relative;
+    .icon{
+      color: $theme-color;
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      @include size(50px, 50px);
+      @include border-radius(50%);
+      z-index: 1;
+      line-height: 50px;
+      text-align: center;
+      font-size: 32px;
+      @include transition(all 0.35s);
+    }
+    .content-inner{
+      .box-title{
+        padding-left: 65px;
+        padding-bottom: 10px;
+        .title{
+          margin-top: 0;
+          font-size: 16px;
+        }
+      }
+    }
+    &:hover{
+      @include box-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+      .icon{
+        color: $theme-color-second;
+      }
+    }
+  }
+}

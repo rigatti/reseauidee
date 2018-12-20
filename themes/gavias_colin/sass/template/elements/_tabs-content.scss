@@ -1,0 +1,71 @@
+.gsc-tabs-content{
+   .nav-tabs{
+      border-bottom: 1px solid $border-color;
+      text-align: center;
+      margin-bottom: 35px;
+      > li{
+         float: none;
+         display: inline-block;
+         > a{
+            font-size: 11px;
+            text-transform: uppercase;
+            font-weight: 500;
+            letter-spacing: 2px;
+            padding: 15px 20px;
+         }
+         &.active{
+            background: #f5f5f5;
+         }
+      }
+   }
+   .tab-content{
+      .tab-pane{
+         .images{
+            float: left;
+            width: 50%;
+            padding-right: 15px;
+            @media(max-width: 600px){
+               width: 100%;
+               padding-right: 0;
+            }
+            .content-inner{
+               width: 100%;
+               text-align: center;
+               span{
+                  position: relative;
+                  display: inline-block;
+                  &:before{
+                     content: "";
+                     position: absolute;
+                     width: 100%;
+                     height: 100%;
+                     z-index: 1;
+                     box-shadow: inset 0 0 0 20px #eaecf1, 0 0 0 1px #eaecf1;
+                  }
+                  &:after{
+                     content: "";
+                     position: absolute;
+                     top: 10px;
+                     left: 10px;
+                     right: 10px;
+                     bottom: 10px;
+                     z-index: 10;
+                     -webkit-box-shadow: 0 0 15px rgba(46,47,57,.19), inset 0 0 0 10px #fff;
+                     -moz-box-shadow: 0 0 15px rgba(46,47,57,.19),inset 0 0 0 10px #fff;
+                     box-shadow: 0 0 15px rgba(46,47,57,.19), inset 0 0 0 10px #fff
+                  }
+               }
+            }
+         }
+         .content-inner{
+            float: left;
+            width: 50%;
+            padding-left: 15px;
+            @media(max-width: 600px){
+               width: 100%;
+               padding-right: 0;
+            }
+         }
+      }
+   }
+}

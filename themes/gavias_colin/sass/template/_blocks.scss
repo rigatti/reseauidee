@@ -1,0 +1,474 @@
+.block {
+  background: $nocolor;
+  margin-bottom: 30px;
+  .block{
+    margin-bottom: 0!important;
+  }
+  .block-title { 
+    background: none;
+    position: relative;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    text-transform: uppercase;
+    font-family: $font-second;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    color: $black;
+    z-index: 9;
+    &:after{
+      content: '';
+      position: absolute;
+      @include size(30px, 1px);
+      background: $theme-color;
+      left: 0;
+      bottom: 0;
+      z-index: 1; 
+    }
+  }
+  &.block-system-main-block{
+    margin-bottom: 0;
+  }
+  &.block-system-breadcrumb-block{
+    overflow: visible;
+    margin-bottom: 20px;
+  }
+  &.block-none, &.no-padding{
+    background: none!important;
+    padding: 0!important;
+    .block-content{
+      padding: 0!important;
+    }
+  }
+  &.no-title{
+    margin-top: 0;
+	  border: none;
+  	&:before{
+  		content: none;
+  	}
+  }
+  &.style-higlight{
+    background: #34495E;
+    padding-left: 20px;
+    padding-right: 20px;
+    .block-title {
+		border: none;
+		span:before{
+			content: none;
+		}
+      h2{
+        margin: 0;
+        padding: 0;
+        border: none;
+        span{
+          padding: 10px;
+          background: #4E6984;
+          color: $white;
+        }
+      }
+    }
+    .post-title a{
+      color: $white;
+    }
+    .more-link a{
+      color: $white;
+      padding: 0 15px 15px;
+      display: block;
+      &:hover{
+        color: $theme-color;
+      }
+    }
+  }
+  &#block-system-main{
+    padding-top: 10px;
+  }
+  &.block-local-tasks-block{
+    margin-bottom: 0;
+  }
+  &.no-title{
+    border: none;
+    > .block-title, > div > .block-title {
+      padding: 0;
+      margin: 0;
+	    border: none;
+  		&:before{
+  			content: none;
+  		}
+    }
+  }
+  &.block-simplenews{
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    .description{
+      display: none;
+    }
+    #edit-mail-wrapper{
+      margin-top: 20px;
+      label{
+        display: none;
+      }
+      input.form-email{
+        padding: 0 20px;
+        width: 100%;
+        height: 40px;
+        background: none;
+        border: 2px solid rgba(255, 255, 255, 0.3);
+        max-width: 320px;
+      }
+    }
+    input#edit-subscribe{
+      background: $theme-color;
+      border: none;
+      padding: 0 15px;
+      line-height: 35px;
+      text-align: center;
+      font-size: 12px;
+      text-transform: uppercase;
+      @include transition(all 0.35s);
+      display: inline-block;  
+      width: auto;
+      margin-top: 15px;
+      color: $white;
+      font-weight: 600;
+      &:hover, &:focus, &:active{
+        background: $theme-color-second;
+        color: $white;
+      }
+    }
+  }
+
+  &.block-blocktabs{
+    position: relative;
+    .ui-widget{
+      font-family: $font-family-base;
+      font-size: $font-size-base;
+    }
+    .ui-tabs-nav{
+      padding: 0;
+      border: none;
+      background: none!important;
+      display: inline-block;
+      float: right;
+      position: absolute;
+      right: 20px;
+      top: -60px;
+      z-index: 99;
+      > li{
+        background: none;
+        padding: 0;
+        margin: 0;
+        border: 0;
+        position: relative;
+        > a{
+          font-size: 14px;
+          text-transform: none;
+          font-family: $font-family-base;
+          font-weight: 600;
+        }
+        &:last-child{
+          > a{
+            padding-right: 0;
+          }
+        }
+        &.ui-tabs-active{
+           > a{
+            color: $theme-color;
+           }
+        }
+      }
+    }
+    .blocktabs{
+      border: none;
+      padding: 0;
+      @include border-radius(0);
+      .ui-tabs-panel{
+        padding: 0!important;
+      }
+    }
+    .block{
+      margin-bottom: 0!important;
+    }
+  }
+}
+
+.block{
+  &.site-branding{
+    margin-bottom: 0;
+  }
+}
+.block-local-tasks-block{
+  position: relative;
+  z-index: 99;
+}
+
+.drupal-tabs{
+  @include clearfix();
+  border-bottom: 1px solid $border-color;
+  a{
+    font-size: 12px;
+  }
+  .is-active a{
+    color: $theme-color;
+  }
+}
+
+.help{
+  position: relative;
+  z-index: 1;
+  display: none;
+  .drupal-tabs{
+    padding: 10px 0;
+    margin-bottom: 25px;
+  }
+  .messages__wrapper{
+    padding: 10px;
+    border: 1px solid #5BC0DE;
+  }
+}
+
+.text-light{
+  .title{
+    color: $white!important;
+  }
+}
+
+.region-main-menu{
+  .block{
+    background: $nocolor;
+    .block-content{
+      padding: 0;
+    }
+  }
+}
+
+.sidebar{
+  .block-menu{
+    @include clearfix();
+    ul{
+      padding-left: 0!important;
+      li{
+        border: none;
+        margin: 0 0 10px!important;
+        padding: 0!important;
+        border: none!important;
+        float: left;
+        width: 100%;
+        list-style-type: none;
+        a{
+          padding: 8px 10px 8px 15px;
+          display: block;
+          border: 1px solid $border-color;
+          text-transform: none;
+          font-size: 14px;
+          overflow: hidden;
+          @include transition(all 0.35s);
+          position: relative;
+          font-weight: 600;
+          letter-spacing: 0;
+          &:hover, &:focus, &:active{
+            color: $theme-color;
+          }
+        }
+        &.menu-item--active-trail{
+          > a{
+            color: $theme-color!important;
+          }
+        }
+      }
+    }
+  }
+}
+
+//--------- Block recent comment ---------------------
+.recent-comment-block{
+  .views-field-picture{
+    @include rtl-margin-right(10px);
+  }
+  .views-field-title{
+    margin-top: -4px;
+    a{
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+  }
+  .views-field-name{
+    color: #a4a4a4;
+    a{
+      color: #a4a4a4;
+    }
+  }
+}
+
+.list-tags{
+  .view-list{
+    ul > li{
+      float: left;
+      border: 1px solid $border-color;
+      display: inline-block;
+      width: auto!important;
+      padding: 0!important;
+      margin: 0 10px 10px 0!important;
+      a{
+        padding: 6px 10px;
+        display: block;
+        @include transition(all 0.35s);
+      }
+      &:hover{
+        background: $theme-color;
+        a{
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+
+nav.breadcrumb{
+  margin-bottom: 0!important;
+  background: none;
+  color: #999999;
+  ol{
+    @include clearfix();
+    list-style: none;
+    margin-bottom: 0!important; 
+    padding: 0;
+    > li{
+      float: left;
+      font-size: 13px;
+      a{
+        color: #999999;
+        &:hover{
+          color: $theme-color;
+        }
+      }
+      span{
+        padding: 0 2px 0px 0px;
+      }
+    }
+  }
+}
+
+.social-border{
+  text-align: center;
+  overflow: hidden;
+  .socials{
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: auto;
+    &:after{
+      content: "";
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: 1000px;
+    }
+    &:before{
+      content: "";
+      border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+      position: absolute;
+      top: 50%;
+      right: 100%;
+      width: 1000px;
+    }
+    a{
+      margin: 0 10px;
+      display: inline-block;
+      background: none;
+      color: #191b1c;
+      i{
+        background: none;
+        font-size: 20px;
+        color: inherit;
+      }
+      &:hover, &:active, &:focus{
+        i{
+          background: inherit;
+        }
+      }
+    }
+  }
+}
+
+.contact-info{
+  ul{
+    margin-top: 10px;
+    li{
+      margin-bottom: 6px;
+      i{
+        color: $theme-color;
+      }
+    }
+  }
+}
+
+.copyright-links{
+  margin: 10px 0 5px;
+  text-align: center;
+  a{
+    font-size: 15px;
+    position: relative;
+    margin-right: 10px;
+    padding-right: 12px;
+    &:after{
+      content: "";
+      @include size(1px, 15px);
+      top: 2px;
+      right: 0;
+      position: absolute;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 1;
+    }
+    &:last-child{
+      &:after{
+        display: none;
+      }
+    }
+    &:hover, &:active, &:focus{
+      color: $theme-color;
+    }
+  }
+}
+
+.contact-link{
+  background: $theme-color;
+  color: $white;
+  padding: 30px;
+  .title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: $font-second;
+  }
+  .action{
+    margin-top: 20px;
+  }
+}
+
+.company-presentation{
+  background: $theme-color-second;
+  color: $white;
+  padding: 30px;
+  .title{
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: $white;
+    font-family: $font-second;
+  }
+  .action{
+    margin-top: 20px;
+  }
+}
+
+.social-icon a {
+  background: none;
+  width: auto;
+  height: auto;
+  line-height: 1;
+  margin-right: 20px;
+  font-size: 16px;
+}

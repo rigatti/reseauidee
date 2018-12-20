@@ -1,0 +1,52 @@
+.gsc-text-rotate{
+  .rotate-text{
+    max-width: 900px;
+    .primary-text{
+      font-size: 40px;
+      font-weight: 400;
+      letter-spacing: -1px;
+      color: $black;
+      font-family: $font-second;
+      strong{
+        font-weight: 600;
+      }
+    }
+    .second-text{
+      font-size: 16px;
+    }
+    .link{
+      margin-top: 30px;
+    }
+  }
+  &.align-center{
+    .rotate-text{
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  &.align-left{
+    .rotate-text{
+      float: left;
+      text-align: left;
+    }
+    .primary-text{
+      text-align: left;
+    }
+    .second-text{
+      text-align: left;
+    }
+    .link{
+      text-align: left;
+    }
+  }
+  &.text-light{
+    .rotate-text{
+      .primary-text{
+        color: $white;
+      }
+      .second-text{
+        color: $white;
+      }
+    }
+  }
+}

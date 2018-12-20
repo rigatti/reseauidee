@@ -1,0 +1,167 @@
+.gsc-heading{
+   padding: 0 0 45px;
+   display: block;
+   width: 100%;
+   @include clearfix();
+   @media(max-width: $screen-sm-max){
+     padding: 0 0 30px;
+     &.heading-bg-white{
+       padding: 30px 20px!important;
+       background: $white;
+     }
+   }
+
+   .title{
+     margin: 0;
+     position: relative;
+   }
+   .title-icon{ 
+     color: $theme-color;
+     margin: 2px 0 0;
+     i{
+       font-size: 20px;
+     }
+     span{
+       position: relative;
+       padding: 0 6px;
+       &:after, &:before{
+         content: '';
+         @include size(50px, 1px);
+         background: #adadad;
+         top: 50%;
+         position: absolute;
+         margin-top: -2px;
+       }
+       &:after{
+         left: 100%;
+       }
+       &:before{
+         right: 100%;
+       }
+     }
+   }
+   .sub-title{
+     color: $theme-color;
+     font-size: 12px;
+     text-transform: uppercase;
+     letter-spacing: 3px;
+     margin-bottom: 5px;
+     font-family: $font-second;
+     font-weight: 500;
+   }
+   .title-desc{
+     max-width: 700px;
+     margin: 0 auto;
+     margin-top: 0;
+     line-height: 28px;
+     p{
+       margin-bottom: 0;
+     }
+   }
+   &.align-center{
+     text-align: center;
+   }
+   &.align-left{
+     text-align: left;
+     .title-desc{
+       float: left;
+     }
+     .title-icon{
+       padding-left: 50px;
+     }
+   }
+   &.align-right{
+     text-align: right;
+     .title-desc{
+       float: right;
+     }
+     .title-icon{
+       padding-right: 50px;
+     }
+   }
+   &.style-1{
+     .title{
+       font-size: 34px;
+       font-weight: 600;
+       position: relative;
+       padding-bottom: 20px;
+       @media(max-width: $screen-sm-max){
+         font-size: 28px;
+       }
+
+       &:after{
+         content: '';
+         background: url('#{$base-theme-image-path}/line-heading.png') repeat-x center center $nocolor;
+         @include size(50px, 9px);
+         position: absolute;
+         bottom: 0;
+         left: 50%;
+         margin-left: -25px;
+         z-index: 1;
+       }
+       span{
+         span{
+           font-weight: 300;
+         }
+       }
+     }
+     .title-desc{
+       margin-top: 10px;
+     }
+     &.align-left{
+       .title{
+         &:after{
+           left: 0;
+           margin-left: 0;
+         }
+       }
+     }
+     &.align-right{
+       .title{
+         &:after{
+           right: 0;
+           margin-left: 0;
+         }
+       }
+     }
+   }
+   &.style-2{
+     padding: 0 0 30px;
+     .title{  
+       font-size: 30px;
+       text-transform: capitalize;
+       line-height: 38px;
+       font-weight: 600;
+       @media(max-width: $screen-sm-max){
+         font-size: 24px;
+         line-height: 32px;
+       }
+     }
+     .title-desc{
+       margin-top: 5px;
+     }
+   }
+   
+ &.text-light{
+   .title-sub{
+     color: $white;
+   }
+   .title{
+     color: $white;
+   }
+   .title-sub span{
+     color: rgba(255, 255, 255, 0.9);
+   }
+   .title-icon{
+     color: $white;
+     span{
+       &:after, &:before{
+         background: rgba(255, 255, 255, 0.6);
+       }
+     }
+   }
+   .title-desc{
+      color: #f5f5f5;
+   }
+ }
+}

@@ -1,0 +1,67 @@
+{%
+  set classes = [
+    'node',
+    'node-detail',
+    'node--type-' ~ node.bundle|clean_class,
+    node.isPromoted() ? 'node--promoted',
+    node.isSticky() ? 'node--sticky',
+    not node.isPublished() ? 'node--unpublished',
+    view_mode ? 'node--view-mode-' ~ view_mode|clean_class,
+    'clearfix',
+  ]
+%}
+
+<!-- Start Display article for teaser page -->
+{% if teaser == true %} 
+  <article{{ attributes.addClass() }}>
+    <div class="gallery-post text-center"> 
+      <div class="images lightGallery">{{ content.field_gallery_image }}</div>
+    </div>
+  </article>  
+<!-- End Display article for teaser page -->
+{% else %}
+<!-- Start Display article for detail page -->
+
+<article{{ attributes.addClass(classes) }}>
+  <div class="post-block">
+      
+    <div class="post-thumbnail post-{{ post_format }}">
+      {{ content.field_image }}
+    </div>
+
+    <div class="post-content">
+      {{ title_prefix }}
+         <h1{{ title_attributes.addClass('post-title') }}>{{ label }}</h1>
+      {{ title_suffix }}         
+      <div class="post-meta">
+        <span class="post-created"> {{date }} </span> /
+        <span class="post-comment"> 
+          <a href="{{url}}/#comments">{{ comment_count }} Comments</a>
+        </span>
+      </div>
+      
+      {% if display_submitted %}
+        <div class="node__meta hidden">
+          {{ author_picture }}
+          <span{{ author_attributes }}>
+            {% trans %}Submitted by {{ author_name }} on {{ date }}{% endtrans %}
+          </span>
+          {{ metadata }}
+        </div>
+      {% endif %}
+
+      <div{{ content_attributes.addClass('node__content', 'clearfix') }}>
+        {{ content|without('field_image', 'field_post_format', 'field_post_type', 'field_post_embed', 'field_post_gallery', 'comment') }}
+      </div>
+      <div id="node-single-comment">
+        {{ content.comment }}
+      </div>
+
+    </div>
+
+  </div>
+
+</article>
+
+<!-- End Display article for detail page -->
+{% endif %}

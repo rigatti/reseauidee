@@ -1,0 +1,88 @@
+.gsc-socials{
+  &.style-1{
+    text-align: right;
+    @include clearfix();
+    a{
+      width: auto;
+      color: #191b1c;
+      background: $white;
+      font-size: 18px;
+      line-height: 1;
+      text-align: center;
+      display: inline-block;
+      margin: 0 10px 0;
+      @include border-radius(50%);
+      @include transition(all 0.35s);
+      &:hover, &:active, &:focus{
+        @include opacity(0.8);
+      }
+    }
+  }
+  &.style-2{
+    margin-bottom: 30px;
+    a {
+      color: $text-color;
+      text-decoration: none;
+      @include transition(all 0.5s ease 0s);
+      margin-right: 12px;
+      font-size: 14px;
+      &:last-child{
+        margin-right: 0;
+      }
+      &:hover, &:focus, &:active{
+        @include opacity(0.7);
+      }
+      i{
+        color: $white;
+        @include size(40px, 40px);
+        @include border-radius(50%);
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        font-size: 12px;
+      }
+      i.fa-facebook-square, i.fa-facebook {
+        background: #3b5998;
+      }
+      i.fa-twitter, i.fa-twitter-square {
+        background: #4099ff;
+      }
+      i.fa-skype {
+        background: #12a5f4;
+      }
+      i.fa-dribbble {
+        background: #ea4c89;
+      }
+      i.fa-linkedin-square, i.fa-linkedin {
+        background: #0e76a8;
+      }
+      i.fa-apple {
+        background: #f2f2f2;
+      }
+      i[class*="fa-pinterest"] {
+        background: #c92228;
+      }
+      i.fa-google-plus-square, i.fa-google-plus {
+        background: #d34836;
+      }
+      i.fa-youtube-square, i.fa-youtube {
+        background: #c4302b;
+      }
+      i.fa-vimeo-square, i.fa-vimeo {
+        background: #4ebbff;
+      }
+      i.fa-tumblr-square, i.fa-tumblr {
+        background: #35465c;
+      }
+      i.fa-xing-square, i.fa-xing {
+        background: #126567;
+      }
+      i.fa-instagram {
+        background: #e8e2d9;
+      }
+      i.fa-behance{
+        background: #0075FF;
+      }
+    }
+  }
+}

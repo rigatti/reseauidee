@@ -1,0 +1,190 @@
+.milestone-block{
+   &.position-icon-top{
+      text-align: center;
+      display: block;
+      width: 100%;
+      padding: 30px;
+      background: $white;
+      .milestone-icon{
+         color: $theme-color;
+         display: inline-block;
+         text-align: center;
+         float: none;
+         margin: 0;
+         @include size(70px, 70px);
+         border: 1px solid $border-color;
+         @include border-radius(50%);
+         padding: 10px; 
+         margin-bottom: 5px;
+         display: inline-block;
+         .icon{ 
+            @include size(100%, 100%);
+            @include border-radius(50%);
+            text-align: center;
+            line-height: 50px;
+            color: $white;
+            background: $theme-color;
+            font-size: 18px;
+            @include box-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+         }
+         span{
+            color: $theme-color;
+            font-size: 38px;
+            line-height: 1;
+         }
+      }
+      .milestone-right{
+         display: block;
+         text-align: center;
+         float: none;
+         width: 100%;
+         margin-top: 10px;
+      }
+      .milestone-number{
+         font-size: 24px;
+      }
+      .milestone-text{
+         font-size: 16px;
+         font-family: $font-second;
+         font-weight: 600;
+         color: $headings-color;
+      } 
+   }
+   &.position-icon-top-2{
+      background: $white;
+      @include clearfix();
+      .block-top{
+         border-bottom: 1px solid $border-color;
+         float: left;
+         width: 100%;
+         padding: 0 0 5px;
+         text-align: center;
+         .milestone-icon{
+            color: $theme-color;
+            display: inline-block;
+            text-align: center;
+            float: none;
+            margin: 0;
+            @include size(70px, 70px);
+            border: 1px solid $border-color;
+            @include border-radius(50%);
+            padding: 10px; 
+            margin-bottom: 5px;
+            display: inline-block;
+            float: left;
+            .icon{ 
+               display: block;
+               @include size(100%, 100%);
+               @include border-radius(50%);
+               text-align: center;
+               line-height: 50px;
+               color: $white;
+               background: $theme-color;
+               font-size: 18px;
+               @include box-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+            }
+            span{
+               color: $theme-color;
+               font-size: 38px;
+               line-height: 1;
+            }
+         }
+         .milestone-number{
+            margin-left: 85px;
+            color: $black;
+            text-align: left;
+            font-size: 38px;
+            line-height: 1;
+            padding-top: 20px;
+         }
+      }
+     .milestone-text{
+         font-size: 12px;
+         text-transform: uppercase;
+         font-family: $font-second;
+         padding: 10px;
+         text-align: center;
+         font-weight: 600;
+         letter-spacing: 2px;
+         float: left;
+         width: 100%;
+      }
+      &.special-top{
+         margin-top: -80px;
+         @media(max-width: $screen-sm-max){
+            margin-top: 30px;
+         }
+      }  
+   }
+   &.position-icon-left{
+      background: $white;
+      @include clearfix();
+      margin-bottom: 30px;
+      .milestone-icon{
+         color: $theme-color;
+         display: inline-block;
+         text-align: center;
+         float: none;
+         margin: 0;
+         @include size(70px, 70px);
+         border: 1px solid $border-color;
+         @include border-radius(50%);
+         padding: 10px; 
+         margin-bottom: 5px;
+         display: inline-block;
+         float: left;
+         .icon{ 
+            display: block;
+            @include size(100%, 100%);
+            @include border-radius(50%);
+            text-align: center;
+            line-height: 50px;
+            color: $white;
+            background: $theme-color;
+            font-size: 18px;
+            @include box-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+         }
+         span{
+            color: $theme-color;
+            font-size: 38px;
+            line-height: 1;
+         }
+      }
+      .milestone-right{
+         padding-left: 85px;
+         text-align: left;
+         padding-top: 10px;
+         .milestone-number{
+            color: $black;
+            text-align: left;
+            font-size: 28px;
+            line-height: 1;
+            padding-top: 20px;
+         }
+        .milestone-text{
+            font-size: 12px;
+            text-transform: uppercase;
+            font-family: $font-second;
+            text-align: left;
+            font-weight: 500;
+            letter-spacing: 2px;
+            width: 100%;
+         }
+      }
+   }
+   &[style*="background-color"]{
+      padding: 50px 20px;
+      @media(max-width: $screen-sm-max){
+         padding: 30px 20px;
+      }
+   }
+   &.text-light{
+      .milestone-number, .milestone-text{
+         color: $white!important;
+      }
+      .milestone-icon span{
+         border-color: $white;
+         color: $white;
+      }
+   }
+}

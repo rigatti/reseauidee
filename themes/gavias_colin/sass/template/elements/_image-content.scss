@@ -1,0 +1,117 @@
+.gsc-image-content{
+  &.skin-v1{
+    text-align: center;
+    margin-bottom: 30px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    .box-content{
+      padding: 10px 15px 0;
+      .title{
+        font-size: 20px;
+      }
+      .read-more{
+        margin-top: 15px;
+      }
+    }
+  }
+  &.skin-v2{
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    @include border-radius(6px);
+    max-width: 420px;
+    margin-right: auto;
+    margin-left: auto;
+    @include box-shadow(0px 10px 30px rgba(0, 0, 0, 0.1));
+    .image{
+      position: relative;
+      overflow: hidden;
+      text-align: center;
+      img{
+        @include transition(all 3s);
+      }
+    }  
+    .box-content{
+      background: $white;
+      padding: 20px;
+      bottom: 0;
+      left: 0;
+      z-index: 1;
+      width: 100%;
+      @include transition(all 0.35s);
+      .title{
+        margin: 0;
+        font-size: 16px;
+      }
+      .desc{
+        margin-top: 5px;
+      }
+    }
+    &:hover{
+      .box-content{
+        background: $theme-color;
+        color: $white;
+        a{
+          color: $white;
+          &:after{
+            color: $white;
+          }
+          &:hover{
+            color: $theme-color-second!important;
+            &:after{
+              color: $theme-color-second;
+            }
+          }
+        }
+        .title{
+          color: $white;
+          a{
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+  &.skin-v3{
+    max-width: 550px;
+    margin: 0 auto 20px;
+    .image{
+      position: relative;
+      margin-bottom: 20px;
+      text-align: center;
+      &:after{
+        content: '';
+        background: rgba(0, 0, 0, 0.2);
+        position: absolute;
+        @include size(100%, 100%);
+        top: 0;
+        left: 0;
+        z-index: 1;
+        @include transition(all 0.35s);
+      }
+      .title{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+        padding: 10px 15px;
+        text-align: center;
+        z-index: 9;
+        margin-top: -25px;
+        color: $white;
+        a{
+          color: $white;
+          text-shadow: 0 0 5px #000;
+        }
+      }
+      &:hover{
+        &:after{
+          background: $theme-color;
+        }
+      }
+    }
+    .read-more{
+      margin-top: 10px;  
+    }
+  }
+}

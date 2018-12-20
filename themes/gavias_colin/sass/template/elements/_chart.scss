@@ -1,0 +1,22 @@
+.gsc-chart{
+   text-align: center;
+   .content{
+      text-align: center;
+      > div{
+         display: block;
+      }
+      .icon{
+         font-size: 25px;
+         margin-top: 5px;
+      }
+      .title{
+         text-transform: uppercase;
+         font-weight: 12px;
+         font-weight: 600;    
+         position: relative;
+         padding-bottom: 10px;
+         margin-bottom: 10px;
+         margin-top: 10px;
+      }
+   }
+}

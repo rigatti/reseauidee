@@ -1,0 +1,306 @@
+.portfolio-filter{
+  margin-bottom: 15px;
+  float: left;
+  width: 100%;
+  text-align: center;
+  ul.nav-tabs{
+    display: inline-block;
+    > li{
+      > a{
+        background: none;
+        font-weight: 600;
+        background: transparent;
+        color: $black;
+        padding: 0 5px;
+        @include border-radius(5px);
+        margin-right: 15px;
+        @include transition(all 0.35s);
+        text-transform: uppercase;
+        letter-spacing: 0;
+        &.active{
+          color: $theme-color;
+        }
+      }
+    }
+  }
+}
+
+.gva-portfolio-items{
+  float: left;
+  width: 100%;
+}
+
+.portfolio-v1{
+  position: relative;
+  overflow: hidden;
+  max-width: 510px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  .images{
+    position: relative;
+    text-align: center;
+    .item-image a{
+      display: block;
+      &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size(100%, 100%); 
+        background: $black;
+        @include opacity(0);
+        @include scale(0.96);
+        z-index: 1;
+        @include transition(all 0.35s);
+      }
+    }
+    .image-item{
+      .picon-expand{
+        @include opacity(0);
+        @include size(32px, 32px);
+        background: rgba(255, 255, 255, 0.8);
+        line-height: 32px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 99;
+        text-align: center;
+        @include transition(all 0.35s);
+        margin-top: 30px;
+      }
+    }
+    .link{
+      @include opacity(0);
+      @include transition(all 0.45s);
+      @include size(32px, 32px);
+      background: rgba(255, 255, 255, 0.8);
+      line-height: 33px;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      z-index: 99;
+      text-align: center;
+      margin-top: 45px;
+    }
+  }
+  .content-inner{
+    position: absolute;
+    @include size(100%, auto);
+    left: 0;
+    bottom: -20px;
+    z-index: 11;
+    @include opacity(0);
+    text-align: left;
+    @include transition(all 0.35s);
+    padding: 0 25px 25px;
+    .title{  
+      margin-top: 30px;
+      @include transition(all 0.35s);
+      a{
+        display: block;
+        font-size: 18px;
+        color: $white;
+        font-weight: 400;
+        line-height: 26px;
+        &:hover, &:focus, &:active{
+          text-decoration: underline;
+        }
+      }
+    }
+    .category{
+      margin-top: 30px;
+      @include transition(all 0.45s);
+      color: $white;
+      a{
+        color: $white;
+        font-size: 11px;
+        text-transform: uppercase;
+        &:hover, &:focus, &:active{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &:hover, &:active, &:focus{
+    .images{
+      .image-item{
+        .picon-expand{
+          @include opacity(1);
+          margin-top: 0;
+        }
+        .item-image a{
+          &:after{
+            @include opacity(0.8);
+            @include scale(1);
+          }
+        }
+      }
+      a.link{
+        @include opacity(1);
+        margin-top: 0;
+      }
+    }
+    .content-inner{
+      @include opacity(1);
+      bottom: 0;
+    }
+    .content-inner{
+      .title{
+        margin-top: 0;
+      }
+      .category{
+        margin-top: 0;
+      }
+    }
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+  }
+  &.portfolio-carousel{
+    margin-bottom: 0;
+  }
+}
+
+.portfolio-carousel-center{
+  .owl-item{
+    @include scale(0.85);
+    @include opacity(0.5);
+    @include transition(all 0.35s);
+    &.active.center{
+      @include scale(1);
+      @include opacity(1);
+    }
+  }
+}
+
+.portfolio-v2{
+  position: relative;
+  overflow: hidden;
+  max-width: 510px;
+  margin: 0 auto;
+  margin-bottom: 15px;
+  @include box-shadow(0 0 30px 0 rgba(0, 0, 0, .1));
+  .images{
+    position: relative;
+    text-align: center;
+    .item-image a{
+      display: block;
+      &:after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include size(100%, 100%); 
+        background: $black;
+        @include opacity(0);
+        @include scale(0.96);
+        z-index: 1;
+        @include transition(all 0.35s);
+      }
+    }
+    .image-item{
+      .picon-expand{
+        @include opacity(0);
+        @include size(32px, 32px);
+        background: rgba(255, 255, 255, 0.8);
+        line-height: 32px;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        z-index: 99;
+        text-align: center;
+        @include transition(all 0.35s);
+        margin-top: 30px;
+      }
+    }
+    .link{
+      @include opacity(0);
+      @include transition(all 0.45s);
+      @include size(32px, 32px);
+      background: rgba(255, 255, 255, 0.8);
+      line-height: 33px;
+      position: absolute;
+      top: 55px;
+      right: 15px;
+      z-index: 99;
+      text-align: center;
+      margin-top: 45px;
+    }
+  }
+  .content-inner{
+    position: relative;
+    padding: 0 30px 30px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-top: 0;
+    .portfolio-content{
+      background: $white;
+      padding-top: 16px;
+      margin-left: 15px;
+      margin-right: 15px;
+      margin-top: -30px;
+      text-align: center;
+      position: relative;
+      z-index: 99;
+    }
+    .title{  
+      margin-bottom: 6px;
+      a{
+        display: block;
+        font-size: 18px;
+        color: $black;
+        font-weight: 600;
+        line-height: 26px;
+        font-family: $font-second;
+        &:hover, &:focus, &:active{
+          color: $theme-color;
+        }
+      }
+    }
+    .category{
+      @include transition(all 0.45s);
+      a{
+        color: #999;
+        font-size: 12px;
+        text-transform: uppercase;
+        font-family: $font-second;
+        font-weight: 600;
+        &:hover, &:focus, &:active{
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+  &:hover, &:active, &:focus{
+    .images{
+      .image-item{
+        .picon-expand{
+          @include opacity(1);
+          margin-top: 0;
+        }
+        .item-image a{
+          &:after{
+            @include opacity(0.8);
+            @include scale(1);
+          }
+        }
+      }
+      a.link{
+        @include opacity(1);
+        margin-top: 0;
+      }
+    }
+    .content-inner{
+      @include opacity(1);
+      bottom: 0;
+    }
+  }
+}
+
+
+
+.no-padding{
+  .portfolio-v1{
+    margin-bottom: 0!important;
+  }
+}
